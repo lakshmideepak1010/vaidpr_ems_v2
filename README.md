@@ -106,5 +106,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Support
 
-For support, email support@vaidpr.com or create an issue in the repository. 
+For support, email lakshmideepak2005@gmail.com or create an issue in the repository. 
 >>>>>>> 88aa929 (initial commit)
