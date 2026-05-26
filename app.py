@@ -44,21 +44,21 @@ def get_db_connection():
     try:
         # Connect to MySQL database on Railway
         return mysql.connector.connect(
-            host='srv1085.hstgr.io',
-            port=3306,
-            user='u578941609_vaid_pr',
-            password='Vaidpr@2025',
-            database='u578941609_viadpr_ems'
+            # host='srv1085.hstgr.io',
+            # port=3306,
+            # user='u578941609_vaid_pr',
+            # password='Vaidpr@2025',
+            # database='u578941609_viadpr_ems'
             # host='trolley.proxy.rlwy.net',
             # port=19855,
             # user='root',
             # password='hucNoZjKVOsVWROObvpJrkduvyoYLIxx',
             # database='railway'
-            # host='Localhost',
-            # port='3306',
-            # user='root',
-            # password='root',
-            # database='vaidpr_ems'
+            host='Localhost',
+            port='3306',
+            user='root',
+            password='Deepak@1010',
+            database='vaidpr_ems'
         )
     except Exception as err:
         print(f"Database connection error: {err}")
@@ -614,8 +614,8 @@ def add_employee():
             password = request.form['password']
             mobile = request.form['mobile']
             adhaar = request.form['adhaar']
-            gender = request.form['gender']
-            dob = request.form['dob']
+            # gender = request.form['gender']
+            # dob = request.form['dob']
             
             # Hash the password
             hashed = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
@@ -625,11 +625,11 @@ def add_employee():
                 cursor = conn.cursor()
                 cursor.execute("""
                     INSERT INTO ems 
-                    (Email, Name, Domain, Role, Pass, Mobile, Adhaar, Permission,gender,dob) 
-                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s,%s,%s)
+                    (Email, Name, Domain, Role, Pass, Mobile, Adhaar, Permission) 
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
                 """, (
                     email, name, domain, role, hashed.decode('utf-8'),
-                    mobile, adhaar, 'basic',gender,dob
+                    mobile, adhaar, 'basic'
                 ))
                 conn.commit()
                 cursor.close()
