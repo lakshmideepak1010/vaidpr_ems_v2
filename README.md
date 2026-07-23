@@ -1,3 +1,9 @@
+LogIn 
+User: admin@gmail.com
+password: admin123
+
+acess based created by admin
+
 <<<<<<< HEAD
 # vaidpr_ems_v1
 =======
@@ -92,6 +98,8 @@ vaidpr-ems/
 ├── requirements.txt       # Python dependencies
 └── README.md             # Project documentation
 ```
+
+
 
 ## Contributing
 
